@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "outDir": "./",
+        "module": "commonjs",
+        "target": "ES5",
+        "allowJs": true,
+        "removeComments": true
+    },
+    "include": [
+        "src/*"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}
