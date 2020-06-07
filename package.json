@@ -10,9 +10,16 @@
     "build": "./node_modules/.bin/tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [
+    "router",
+    "regexp",
+    "fast router",
+    "regexp router"
+  ],
   "author": "afu",
   "license": "MIT",
   "devDependencies": {
     "typescript": "^3.9.5"
-  }
+  },
+  "homepage": "https://github.com/douyu-beijing/fast-regexp-router"
 }
