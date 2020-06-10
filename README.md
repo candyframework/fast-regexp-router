@@ -57,7 +57,7 @@ const routesList = [
 
 const reg = new FastRouter();
 // 设置路由
-// reg.setRoutesList(routesList);
+// reg.setRoutes(routesList);
 // 或者依次设置路由
 for(let v of routesList) {
     reg.setRoute(v.route, v.handler);
