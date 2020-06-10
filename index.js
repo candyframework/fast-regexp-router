@@ -13,7 +13,7 @@ module.exports = (function () {
         }
         return str;
     };
-    FastRegExpRouter.prototype.setRoutesList = function (routesList) {
+    FastRegExpRouter.prototype.setRoutes = function (routesList) {
         this.routesList = routesList;
     };
     FastRegExpRouter.prototype.setRoute = function (route, handler) {

@@ -47,7 +47,7 @@ module.exports = class FastRegExpRouter {
      *
      * @param {Array} routesList
      */
-    setRoutesList(routesList) {
+    setRoutes(routesList) {
         this.routesList = routesList;
     }
 
