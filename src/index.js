@@ -23,7 +23,7 @@ module.exports = class FastRegExpRouter {
          */
         this.combinedRouteParameters = null;
     }
-    
+
     /**
      * 删除两端字符
      *
@@ -80,7 +80,7 @@ module.exports = class FastRegExpRouter {
      *
      * {
      *      pattern: '',
-     *      parameters: [uid]
+     *      parameters: [uid, ...]
      * }
      */
     toRegExpRouter(patternString) {
