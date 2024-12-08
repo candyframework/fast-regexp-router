@@ -1,4 +1,4 @@
-const FastRouter = require('../FastRouter');
+const FastRouter = require('..');
 
 const routesList = [
     {
