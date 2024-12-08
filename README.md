@@ -55,7 +55,7 @@ const routesList = [
     }
 ];
 
-const reg = new FastRouter();
+const reg = new FastRouter.default();
 // 设置路由
 // reg.setRoutes(routesList);
 // 或者依次设置路由
