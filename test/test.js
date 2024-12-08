@@ -1,4 +1,4 @@
-const FastRouter = require('../index');
+const FastRouter = require('../FastRouter');
 
 const routesList = [
     {
@@ -21,12 +21,12 @@ const routesList = [
     }
 ];
 
-const reg = new FastRouter();
+const reg = new FastRouter.default();
 // 设置路由
 // reg.setRoutesList(routesList);
 // 或者依次设置路由
 for(let v of routesList) {
-    reg.setRoute(v.route, v.handler);
+    reg.setRoute(v);
 }
 
 // 进行路由匹配
