@@ -10,7 +10,7 @@ var FastRouter = (function () {
         if (character === str.charAt(0)) {
             str = str.substring(1);
         }
-        if (character === str.charAt(str.length - 1)) {
+        if (str.length > 0 && character === str.charAt(str.length - 1)) {
             str = str.substring(0, str.length - 1);
         }
         return str;
@@ -38,7 +38,7 @@ var FastRouter = (function () {
         pattern = '^\\/' + pattern.replace(/\//g, '\\/') + '\\/?$';
         return {
             pattern: pattern,
-            parameters: parameters
+            parameters: parameters,
         };
     };
     FastRouter.prototype.combineRoutes = function () {
@@ -114,7 +114,7 @@ var FastRouter = (function () {
             }
             ret = {
                 handler: this.routeList[i].handler,
-                parameters: parameters
+                parameters: parameters,
             };
             break;
         }
@@ -133,18 +133,17 @@ var FastRouter = (function () {
         var routeIndex = -1 === subPatternPosition
             ? this.getMatchedRouteIndexByPath(matches.input)
             : this.getMatchedRouteIndexBySubPattern(subPatternPosition);
-        var parameters = null;
         var parameterNames = this.combinedRouteParameters[routeIndex];
+        var parameters = null;
         if (null !== parameterNames) {
             parameters = {};
             for (var i = 0, len = parameterNames.length; i < len; i++) {
-                parameters[parameterNames[i]] =
-                    matches[subPatternPosition + i];
+                parameters[parameterNames[i]] = matches[subPatternPosition + i];
             }
         }
         return {
             handler: this.routeList[routeIndex].handler,
-            parameters: parameters
+            parameters: parameters,
         };
     };
     return FastRouter;
